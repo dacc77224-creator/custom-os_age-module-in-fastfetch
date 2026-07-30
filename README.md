@@ -6,3 +6,4 @@ custom mudule in fastfetch that shows the days since the installation of windows
 
 
 ONLY FOR WINDOWS 
+check other repository for the linux version
