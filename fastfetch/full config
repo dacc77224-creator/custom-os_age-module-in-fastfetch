@@ -1,0 +1,24 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "source": "auto"
+    },
+    "display": {
+        "separator": ": "
+    },
+    "modules": [
+        "title",
+        "separator",
+        "os",
+        {
+            "type": "command",
+            "key": "os age",
+            "keyColor": "34",
+            "shell": "powershell.exe",
+            "param": "-NoProfile -Command",
+            "text": "$d=(Get-CimInstance Win32_OperatingSystem).InstallDate; $ts=New-TimeSpan -Start $d -End (Get-Date); \"$($ts.Days) days, $($ts.Hours) hours, $($ts.Minutes) mins\""
+        },
+        "kernel",
+        "uptime"
+    ]
+}
